@@ -1,6 +1,8 @@
 import React from 'react';
 import './homeStyle.css'
 
+import HoverCard from '../../components/hoverCard/hoverCard'
+
 // Colors for squared on background
 const colors = [
   '#337AB7',
@@ -37,14 +39,17 @@ setInterval(createSquare, 150)
 
 // Visible HomePage.
 const HomePage = () => {
-  return (
+  return (<>
     <div>
+      <div className="container">
+        <HoverCard/>
+    </div>
         <section></section>
         <script>
             {createSquare}
         </script>
     </div>
-  );
+  </>);
 }
 
 export default HomePage;
